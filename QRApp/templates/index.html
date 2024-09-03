@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f06, #f79);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-image: url('https://avatars.mds.yandex.net/i?id=6ff87c4e0e11e79e6f0ff52e710d9fd66d98a487-12423122-images-thumbs&n=13');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h1 class="text-center mb-4">QR Code Generator</h1>
+        <form action="{% url 'generate_qr' %}" method="post" class="d-flex flex-column align-items-center">
+            {% csrf_token %}
+            <div class="mb-3 w-100">
+                <label for="url" class="form-label">Enter URL:</label>
+                <input type="text" id="url" name="url" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-custom"></button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

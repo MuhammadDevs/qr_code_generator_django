@@ -67,6 +67,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Django](https://www.djangoproject.com/) - The web framework used.
 - [qrcode](https://pypi.org/project/qrcode/) - The Python library for generating QR codes.
 
----
-
-You can adjust the links and project details as needed.

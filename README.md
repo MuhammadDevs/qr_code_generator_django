@@ -24,19 +24,13 @@ This Django application allows you to generate QR codes for any link. Whether yo
    cd qr_code_generator_django
    ```
 
-3. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Apply migrations:
+3. Apply migrations:
 
    ```bash
    python manage.py migrate
    ```
 
-5. Run the development server:
+4. Run the development server:
 
    ```bash
    python manage.py runserver
@@ -47,21 +41,6 @@ This Django application allows you to generate QR codes for any link. Whether yo
    ```
    http://127.0.0.1:8000/
    ```
-
-## Usage
-
-1. Enter a URL into the input field.
-2. Click on the "Generate QR Code" button.
-3. Download the generated QR code as an image.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue for suggestions and improvements.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [Django](https://www.djangoproject.com/) - The web framework used.
